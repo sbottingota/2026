@@ -1,0 +1,6 @@
+q1b: QIGS and AGMSTKGMSO
+
+q2b: LOUDER
+
+q3b: 8111111
+q3c: 35176
