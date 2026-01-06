@@ -2,7 +2,7 @@ use std::io;
 
 fn char_to_coord(c: char) -> (u32, u32) {
     let val = c as u32 - 'A' as u32;
-    (val % 5 + 0, 4 - val / 5)
+    (val % 5, 4 - val / 5)
 }
 
 fn coords(divisions: Vec<char>) -> (u32, u32) {
