@@ -1,6 +1,6 @@
 use std::io;
 
-fn count_unordered_digits(mut n: u64) -> u32 {
+fn is_raindrop(mut n: u64) -> bool {
     /*
     if n / 10 == 0 {
         return 0;
@@ -15,12 +15,16 @@ fn count_unordered_digits(mut n: u64) -> u32 {
     while n > 0 {
         if (n / 10) % 10 > n % 10 {
             unordered_digits += 1;
+
+            if unordered_digits > 1 {
+                return false
+            }
         }
 
         n /= 10;
     }
 
-    unordered_digits
+    unordered_digits == 1
 }
 
 
@@ -28,7 +32,7 @@ fn count_raindrops_to(n: u64) -> u64 {
     let mut count = 0;
 
     for i in 1..n {
-        if count_unordered_digits(i) == 1 {
+        if is_raindrop(i) {
             count += 1;
         }
     }
