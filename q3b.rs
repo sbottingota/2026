@@ -1,6 +1,3 @@
-use memoize::memoize;
-
-#[memoize]
 fn count_unordered_digits(n: u64) -> u32 {
     if n / 10 == 0 {
         return 0;

@@ -1,16 +1,15 @@
 use std::io;
-use memoize::memoize;
 
-#[memoize]
-fn count_unordered_digits(n: u64) -> u32 {
+fn count_unordered_digits(mut n: u64) -> u32 {
+    /*
     if n / 10 == 0 {
         return 0;
     }
 
     let unordered = if (n / 10) % 10 > n % 10 { 1 } else { 0 };
     unordered + count_unordered_digits(n / 10)
+    */
 
-    /*
     let mut unordered_digits = 0_u32;
 
     while n > 0 {
@@ -22,7 +21,6 @@ fn count_unordered_digits(n: u64) -> u32 {
     }
 
     unordered_digits
-    */
 }
 
 
